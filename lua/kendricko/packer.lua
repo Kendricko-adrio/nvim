@@ -2,6 +2,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         -- or                            , branch = '0.1.x',
@@ -59,6 +61,7 @@ return require('packer').startup(function(use)
 
     use {
         "folke/trouble.nvim",
+        requires = "nvim-tree/nvim-web-devicons"
     }
 
     use {
@@ -67,7 +70,7 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    use 'nvim-tree/nvim-web-devicons'
+
     use { 'romgrk/barbar.nvim', requires = 'nvim-web-devicons' }
     use 'JoosepAlviste/nvim-ts-context-commentstring'
     use 'norcalli/nvim-colorizer.lua'
